@@ -1,0 +1,37 @@
+
+:root {
+  --lightGrey: #979797;
+  --grey: #575757;
+  --whiteish: #d3e1ff;
+  --red: #e60101;
+  --lightRed: #ff6868;
+  --blue: #343ca8;
+
+  background-color: var(--lightGrey);
+}
+
+#card {
+  /* width: 400px; */
+  /* width: fit-content;
+  height: ; */
+  background-color: var(--grey);
+  padding: 45px;
+  border-radius: 5px;
+  width: 50vmin; height: 50vmin;
+}
+
+.heart-container {
+  position: relative;
+}
+
+#heart {
+  height: auto;
+  width: auto;
+}
+
+.heart-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
