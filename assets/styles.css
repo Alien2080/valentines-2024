@@ -1,4 +1,3 @@
-
 :root {
   --lightGrey: #979797;
   --grey: #575757;
@@ -6,8 +5,9 @@
   --red: #e60101;
   --lightRed: #ff6868;
   --blue: #343ca8;
+  --background: #f39e9e;
 
-  background-color: var(--lightGrey);
+  background-color: var(--background);
 }
 
 #card {
@@ -20,6 +20,26 @@
   width: 50vmin; height: 50vmin;
 }
 
+.message {
+  color: var(--whiteish);
+  font-size: xx-large;
+  font-family: cursive;
+  width: 1px;
+  text-wrap: nowrap;
+  overflow: hidden;
+}
+
+#message {
+  /* width: 1px; */
+  transition: width 2s;
+}
+
+#message2 {
+  /* width: 1px; */
+  transition: width 4s 2s;
+}
+
+
 .heart-container {
   position: relative;
 }
@@ -27,6 +47,8 @@
 #heart {
   height: auto;
   width: auto;
+  scale: 75%;
+  margin-top: -50px;
 }
 
 .heart-text {
