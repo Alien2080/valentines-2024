@@ -1,32 +1,46 @@
+@font-face {
+  font-family: 'Roboto';
+  src: url('./fonts/Roboto-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Creattion';
+  src: url('./fonts/Creattion.otf') format('opentype');
+}
+
 :root {
   --lightGrey: #979797;
   --grey: #575757;
-  --whiteish: #d3e1ff;
+  --whiteish: #bec2c9;
   --red: #e60101;
   --lightRed: #ff6868;
   --blue: #343ca8;
   --background: #f39e9e;
 
-  background-color: var(--background);
+  background-color: var(--blue);
 }
 
 #card {
-  /* width: 400px; */
-  /* width: fit-content;
-  height: ; */
+  display: flex;
+  justify-content: center;
   background-color: var(--grey);
-  padding: 45px;
+  padding: 30px;
   border-radius: 5px;
-  width: 50vmin; height: 50vmin;
+  width: 50vmax; height: 80.9vmax;
 }
 
 .message {
+  position: absolute;
   color: var(--whiteish);
-  font-size: xx-large;
-  font-family: cursive;
+  font-size: 80px;
+  font-family: Creattion, cursive;
+  font-weight: 450;
+  /* letter-spacing: 2px; */
+  /* font-stretch: expanded; */
   width: 1px;
   text-wrap: nowrap;
   overflow: hidden;
+  margin: 0px;
 }
 
 #message {
@@ -37,18 +51,22 @@
 #message2 {
   /* width: 1px; */
   transition: width 4s 2s;
+  top: 10%;
 }
 
 
 .heart-container {
   position: relative;
+  justify-content: center;
+  height: fit-content;
+  top: 30%;
 }
 
 #heart {
   height: auto;
   width: auto;
-  scale: 75%;
-  margin-top: -50px;
+  scale: 60%;
+  /* margin-top: 200px; */
 }
 
 .heart-text {
@@ -56,4 +74,33 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.heart-btn {
+  position: absolute;
+  bottom: 80%; /* Adjust based on your design */
+  border: none;
+  color: var(--whiteish);
+  font-weight: bold;
+  font-family: Roboto;
+  font-size: xx-large;
+  cursor: pointer;
+  padding: 10px 20px;
+  /* margin: 0 5px; */
+  border-radius: 20px;
+  background-color: #ff69b4; /* Soft pink */
+  transition: opacity 0.4s;
+  opacity: 0;
+}
+
+.heart-btn:hover {
+  background-color: #ff1493; /* Deeper pink */
+}
+
+#noBtn {
+  right: 10%; /* Initial position */
+}
+
+#yesBtn {
+  left: 10%; /* Initial position */
 }
