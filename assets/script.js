@@ -6,7 +6,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
     message.style.width = '400px';
     message2.style.width = '700px';
   }, 0);
- 
 });
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -34,7 +33,55 @@ document.addEventListener('DOMContentLoaded', () => {
     noBtn.style.opacity = '1';
     yesBtn.style.opacity = '1';
   }, 6000);
+});
 
 
+document.addEventListener('DOMContentLoaded', () => {
+  const yesBtn = document.getElementById('yesBtn');
+  const cardElements = Array.from(document.getElementById('card').children);
+  const presentContainer = document.getElementById('presentContainer');
+  const presentImage = document.getElementById('presentImage');
+  const finalMessage = document.getElementById('finalMessage');
+
+  yesBtn.addEventListener('click', () => {
+    // Fade out all card elements except the card itself
+    cardElements.forEach(el => {
+      if (el.id !== 'presentContainer') {
+        el.style.opacity = 0;
+      }
+    });
+
+    // After fade out, display the present
+    setTimeout(() => {
+      cardElements.forEach(el => {
+        if (el.id !== 'presentContainer') {
+          el.classList.add('hidden');
+        }
+      });
+      presentContainer.style.position = 'absolute';
+      presentContainer.style.pointerEvents = 'painted';
+      presentImage.classList.remove('hidden');
+      setTimeout(() => {
+        presentImage.style.maxWidth = '100%';
+        presentImage.style.opacity = 1;
+      }, 0);
+
+    }, 500); // this matches the transition time of the card elements
+
+    presentImage.addEventListener('click', () => {
+      // Fade out the present image
+      presentImage.style.opacity = 0;
+
+      setTimeout(() => {
+        presentImage.classList.add('hidden');
+        finalMessage.classList.remove('hidden');
+        setTimeout(() => {
+          finalMessage.style.maxWidth = '100%';
+          finalMessage.style.opacity = 1;
+          finalMessage.style.padding = '100px';
+        }, 0);
+      }, 2000); // this matches the transition time of the present image
+    });
+  });
 });
 

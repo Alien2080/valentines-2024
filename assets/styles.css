@@ -23,9 +23,11 @@
 #card {
   display: flex;
   justify-content: center;
+  align-items: center;
+  position: relative;
   background-color: var(--grey);
   padding: 30px;
-  border-radius: 5px;
+  border-radius: 9px;
   width: 50vmax; height: 80.9vmax;
 }
 
@@ -46,12 +48,13 @@
 #message {
   /* width: 1px; */
   transition: width 2s;
+  top: 8%;
 }
 
 #message2 {
   /* width: 1px; */
   transition: width 4s 2s;
-  top: 10%;
+  top: 20%;
 }
 
 
@@ -103,4 +106,36 @@
 
 #yesBtn {
   left: 10%; /* Initial position */
+}
+
+.hidden {
+  display: none;
+}
+
+#presentContainer {
+  position: absolute;
+  top: -15%;
+  left: 0;
+  right: 45%;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s ease-in-out;
+  pointer-events: none;
+}
+
+#presentImage, #finalMessage {
+  transition: all 2s ease-in-out;
+  max-width: 0;
+  opacity: 0;
+  pointer-events: auto;
+  /* Ensure the content doesn't take space and is not clickable when hidden */
+}
+
+#finalMessage {
+  background-color: #f39e9e;
+  padding: 0px;
+  border-radius: 50px;
+  font-family: Roboto;
 }
