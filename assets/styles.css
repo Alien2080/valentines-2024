@@ -28,47 +28,56 @@
   background-color: var(--grey);
   padding: 30px;
   border-radius: 9px;
-  width: 50vmax; height: 80.9vmax;
+  width: 260px; 
+  height: 660px;
 }
 
 .message {
   position: absolute;
   color: var(--whiteish);
-  font-size: 80px;
+  font-size: 60px;
   font-family: Creattion, cursive;
   font-weight: 450;
-  /* letter-spacing: 2px; */
-  /* font-stretch: expanded; */
-  width: 1px;
+  text-align: center;
+  width: 0px;
   text-wrap: nowrap;
   overflow: hidden;
   margin: 0px;
 }
 
 #message {
-  /* width: 1px; */
   transition: width 2s;
   top: 8%;
 }
 
 #message2 {
-  /* width: 1px; */
   transition: width 4s 2s;
   top: 20%;
+}
+
+#message3 {
+  font-size: 85px;
+  transition: width 6s 4s;
+  top: 38%;
 }
 
 
 .heart-container {
   position: relative;
+  display: flex;
   justify-content: center;
-  height: fit-content;
-  top: 30%;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  /* top: 35%; */
 }
 
 #heart {
-  height: auto;
-  width: auto;
-  scale: 60%;
+  position: relative;
+  /* height: auto;
+  width: auto; */
+  scale: 30%;
+  top: 30%;
   /* margin-top: 200px; */
 }
 
@@ -81,7 +90,7 @@
 
 .heart-btn {
   position: absolute;
-  bottom: 80%; /* Adjust based on your design */
+  bottom: 36%; /* Adjust based on your design */
   border: none;
   color: var(--whiteish);
   font-weight: bold;
@@ -92,7 +101,7 @@
   /* margin: 0 5px; */
   border-radius: 20px;
   background-color: #ff69b4; /* Soft pink */
-  transition: opacity 0.4s;
+  transition: all 0.4s;
   opacity: 0;
 }
 
@@ -101,11 +110,11 @@
 }
 
 #noBtn {
-  right: 10%; /* Initial position */
+  right: 0%; /* Initial position */
 }
 
 #yesBtn {
-  left: 10%; /* Initial position */
+  left: 0%; /* Initial position */
 }
 
 .hidden {
@@ -114,26 +123,31 @@
 
 #presentContainer {
   position: absolute;
-  top: -15%;
+  /* top: -15%;
   left: 0;
-  right: 45%;
-  bottom: 0;
+  right: 40%;
+  bottom: 0; */
   display: flex;
   justify-content: center;
   align-items: center;
   transition: all 0.5s ease-in-out;
   pointer-events: none;
+  width: 100%;
 }
 
 #presentImage, #finalMessage {
   transition: all 2s ease-in-out;
-  max-width: 0;
+  /* max-width: 0; */
   opacity: 0;
   pointer-events: auto;
   /* Ensure the content doesn't take space and is not clickable when hidden */
 }
 
 #finalMessage {
+  position: relative;
+  align-items: center;
+  text-align: center;
+  width: 100%;
   background-color: #f39e9e;
   padding: 0px;
   border-radius: 50px;

@@ -1,10 +1,12 @@
 document.addEventListener('DOMContentLoaded', (event) => {
   const message = document.getElementById('message');
   const message2 = document.getElementById('message2');
+  const message3 = document.getElementById('message3');
 
   setTimeout(() => {
-    message.style.width = '400px';
-    message2.style.width = '700px';
+    message.style.width = '300px';
+    message2.style.width = '350px';
+    message3.style.width = '250px';
   }, 0);
 });
 
@@ -24,9 +26,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const randomY = Math.random() * maxY;
     
     // Apply new positions
-    // noBtn.style.right = 'auto'; // Reset to use top and left instead
-    noBtn.style.bottom = `${randomY}px`;
-    noBtn.style.right = `${randomX}px`;
+    noBtn.style.top = `${randomY}px`;
+    noBtn.style.left = `${randomX}px`;
+    
+    // Reset any previously set bottom and right properties
+    noBtn.style.bottom = 'auto';
+    noBtn.style.right = 'auto';
   });
 
   setTimeout(() => {
@@ -76,9 +81,9 @@ document.addEventListener('DOMContentLoaded', () => {
         presentImage.classList.add('hidden');
         finalMessage.classList.remove('hidden');
         setTimeout(() => {
-          finalMessage.style.maxWidth = '100%';
+          // finalMessage.style.maxWidth = '80%';
           finalMessage.style.opacity = 1;
-          finalMessage.style.padding = '100px';
+          finalMessage.style.padding = '70px';
         }, 0);
       }, 2000); // this matches the transition time of the present image
     });
