@@ -24,20 +24,16 @@ document.addEventListener('DOMContentLoaded', () => {
     // Generate random positions
     const randomX = Math.random() * maxX;
     const randomY = Math.random() * maxY;
-    
+
     // Apply new positions
-    noBtn.style.top = `${randomY}px`;
-    noBtn.style.left = `${randomX}px`;
-    
-    // Reset any previously set bottom and right properties
-    noBtn.style.bottom = 'auto';
-    noBtn.style.right = 'auto';
+    noBtn.style.bottom = `${randomY}px`;
+    noBtn.style.right = `${randomX}px`;
   });
 
   setTimeout(() => {
     noBtn.style.opacity = '1';
     yesBtn.style.opacity = '1';
-  }, 6000);
+  }, 11000);
 });
 
 
@@ -81,7 +77,6 @@ document.addEventListener('DOMContentLoaded', () => {
         presentImage.classList.add('hidden');
         finalMessage.classList.remove('hidden');
         setTimeout(() => {
-          // finalMessage.style.maxWidth = '80%';
           finalMessage.style.opacity = 1;
           finalMessage.style.padding = '70px';
         }, 0);

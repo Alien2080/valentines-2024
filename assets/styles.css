@@ -51,13 +51,13 @@
 }
 
 #message2 {
-  transition: width 4s 2s;
+  transition: width 4900ms 2000ms;
   top: 20%;
 }
 
 #message3 {
   font-size: 85px;
-  transition: width 6s 4s;
+  transition: width 7800ms 5800ms;
   top: 38%;
 }
 
@@ -101,7 +101,7 @@
   /* margin: 0 5px; */
   border-radius: 20px;
   background-color: #ff69b4; /* Soft pink */
-  transition: all 0.4s;
+  transition: all 0.6s;
   opacity: 0;
 }
 
